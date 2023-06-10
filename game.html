@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pukul Teman</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/radio.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="tanah">
+        <div class="teman"></div>
+      </div>
+      <div class="tanah">
+        <div class="teman"></div>
+      </div>
+      <div class="tanah">
+        <div class="teman"></div>
+      </div>
+      <div class="tanah">
+        <div class="teman"></div>
+      </div>
+      <div class="tanah">
+        <div class="teman"></div>
+      </div>
+      <div class="tanah">
+        <div class="teman"></div>
+      </div>
+
+      <!-- setting -->
+      <div class="setting">
+        <div class="level">
+          <ul>
+            <li>
+              <input id="r1" type="radio" name="radio" value="easy" checked />
+              <label for="r1">Easy</label>
+            </li>
+            <li>
+              <input id="r2" type="radio" name="radio" value="medium" />
+              <label for="r2">Medium</label>
+            </li>
+            <li>
+              <input id="r3" type="radio" name="radio" value="hard" />
+              <label for="r3">Hard</label>
+            </li>
+          </ul>
+        </div>
+        <button class="buttonClose" id="close_setting" onclick="close_settings()">selesai</button>
+      </div>
+      <div class="result">
+        <div class="msg"></div>
+        <div class="buttongroup">
+          <button class="buttonClose" id="close_setting" onclick="close_settings()">udahan</button>
+          <button class="buttonClose" id="close_setting" onclick="again()">main lg</button>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <h1 class="score">0</h1>
+      <button class="button" id="start" onclick="mulai()">mulai</button>
+      <button class="button" id="setting" onclick="settings()">setting</button>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
