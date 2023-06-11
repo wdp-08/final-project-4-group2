@@ -9,7 +9,7 @@ body {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .main-parent {
-  background-image: url("../img/bg.jpg");
+  background-image: url("../img/bg1.png");
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
@@ -47,7 +47,7 @@ body {
   padding: 14px 10px;
   border: 1px solid rgba(0, 0, 0, 0.3521);
   outline: none;
-  background: transparent;
+  background: #fff;
   margin-bottom: 10px;
   font-size: 15px;
   font-family: "Roboto", sans-serif;
@@ -55,6 +55,7 @@ body {
 .form-wrap form .submit-button {
   text-align: center;
 }
+
 .form-wrap form .submit-button button.button {
   padding: 13px 30px;
   background-color: #f57224;
@@ -65,6 +66,12 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
+
+.form-wrap form .submit-button button.button:hover {
+  background-color: #fff;
+  color: black;
+}
+
 .form-wrap form .account-have {
   display: flex;
   justify-content: end;
@@ -73,9 +80,13 @@ body {
   margin-top: 10px;
 }
 .form-wrap form .account-have a {
-  color: #3498db;
+  color: black;
   margin-left: 5px;
   text-decoration: none;
+}
+
+.form-wrap form .account-have a:hover {
+  color: #fff;
 }
 
 /* game.html */
@@ -234,9 +245,7 @@ body {
 
 /*high score */
 * {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 /* Card */
@@ -255,7 +264,6 @@ body {
   border-top-right-radius: 4px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-
 }
 
 .card-body {
@@ -270,9 +278,7 @@ body {
 }
 
 .table thead {
-  background-color: #C38154;
-
-
+  background-color: #c38154;
 }
 
 .table th,
@@ -314,7 +320,6 @@ body {
   color: white;
 }
 
-
 .bg-danger {
   background-color: rgba(255, 0, 0, 0.849);
   color: white;
@@ -323,7 +328,6 @@ body {
 .bg-success {
   background-color: rgba(0, 128, 0, 0.733);
   color: white;
-
 }
 
 .bg-warning {
@@ -332,6 +336,6 @@ body {
 }
 
 .bg-coklat {
-  background-color: #FFC26F;
-  color: #884A39;
+  background-color: #ffc26f;
+  color: #884a39;
 }
