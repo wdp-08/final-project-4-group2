@@ -231,3 +231,107 @@ body {
     font-weight: bold;
   }
 }
+
+/*high score */
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+}
+
+/* Card */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  background-color: #b9b9b9;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+
+}
+
+.card-body {
+  padding: 10px;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 4px;
+}
+
+.table thead {
+  background-color: #C38154;
+
+
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Row */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Column */
+.col {
+  flex: 1;
+  padding: 10px;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Button Variations */
+.btn-blue {
+  background-color: blue;
+  color: white;
+}
+
+.btn-dark {
+  background-color: #333;
+  color: white;
+}
+
+
+.bg-danger {
+  background-color: rgba(255, 0, 0, 0.849);
+  color: white;
+}
+
+.bg-success {
+  background-color: rgba(0, 128, 0, 0.733);
+  color: white;
+
+}
+
+.bg-warning {
+  background-color: rgba(255, 255, 0, 0.801);
+  color: black;
+}
+
+.bg-coklat {
+  background-color: #FFC26F;
+  color: #884A39;
+}
