@@ -336,8 +336,7 @@ body {
   color: #884A39;
 }
 
-
-/* responsive page */
+/* responsive page highscore */
 @media (max-width: 576px) {
   .col {
       flex: 100%;
