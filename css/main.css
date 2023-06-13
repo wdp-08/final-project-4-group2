@@ -1,0 +1,25 @@
+.full-background {
+    /* Center the content */
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    /* Take full size */
+    height: 100vh;
+    width: 100%;
+
+    /* Background */
+    background: url(../img/backgroundKota.png) center center / cover no-repeat;
+}
+
+h5 {
+    color: orange;
+    font-family: 'poppins';
+    font-weight: bold;
+}
+
+p {
+    font-family: 'poppins';
+    font-weight: bold;
+}
