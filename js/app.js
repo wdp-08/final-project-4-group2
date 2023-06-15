@@ -49,10 +49,12 @@ login.onclick = (e) => {
     if (emailAddress == Email && passWord == Password) {
       Swal.fire("Good job!", "login successful!", "success");
       setTimeout(() => {
-        location.href = "game.html";
+        location.href = "afterLogin.html";
       }, 1000);
     } else {
       Swal.fire("Opps..!", "Something is wrong!", "error");
     }
   }
 };
+
+// AfterLogin function
