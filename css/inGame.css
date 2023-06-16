@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+  }
+  
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    background: url(../img/backgroundBefore.png) bottom center no-repeat;
+    background-size: cover;
+    position: fixed;
+    bottom: 0;
+    align-content: flex-end;
+    cursor: url(../img/paluBefore.png), auto;
+  }
+
+  .container:active{
+    cursor: url(../img/paluAfter.png), auto;
+  }
+  
+  .maling {
+    background-size: 250px;
+    background-image: url(../img/maling.png);
+    background-position: center -40px ;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+  }
+  
+  .pintu {
+    overflow: hidden;
+    height: 300px;
+    width: 300px;
+  }
+  
+  .hide {
+    transform: translate(250px);
+    display: none;
+  }
+  
+  #maling1 {
+    position: absolute;
+    left: 80px;
+    top: 200px;
+  }
+  
+  #maling2 {
+    position: absolute;
+    left: 390px;
+    top: 200px;
+  }
+  
+  #maling3 {
+    position: absolute;
+    left: 700px;
+    top: 200px;
+  }
+  
+  #maling4 {
+    position: absolute;
+    left: 1010px;
+    top: 200px;
+  }
+  
+  .skor {
+    position: absolute;
+    font-family: 'Basic', sans-serif;
+    left: 520px;
+    top: 540px;
+    font-size: 60px;
+    text-align:center;
+    color: rgb(0, 0, 0);
+    border-radius: 52%;
+    width: 90px;
+    height: 80px;
+    background-color: wheat;
+  }
+  
+  .time {
+    position: absolute;
+    font-family: 'Basic', sans-serif;
+    right: 80px;
+    top: 540px;
+    font-size: 60px;
+    text-align:center;
+    color: rgb(0, 0, 0);
+    border-radius: 52%;
+    width: 90px;
+    height: 80px;   
+    background-color: wheat;
+  }
+
+  .desc-skor{
+    position: absolute;
+    color: wheat;
+    font-size: 52px;
+    top: 550px;
+    left: 150px;
+    font-family: 'Basic', sans-serif;
+  }
+
+  .desc-time{
+    position: absolute;
+    color: wheat;
+    font-size: 52px;
+    top: 550px;
+    right: 200px;
+    font-family: 'Basic', sans-serif;
+  }
+
