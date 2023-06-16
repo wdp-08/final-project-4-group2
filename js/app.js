@@ -74,6 +74,20 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function selectLevel(level) {
-  alert("Anda memilih level: " + level);
+  swal.fire("Anda memilih level: " + level);
   $('#myModal').modal('hide');
+}
+
+function redirectToHighscore() {
+  window.location.href = "highscore.html";
+}
+
+function selectLevel(level) {
+  var levelText = document.getElementById("levelText");
+  levelText.textContent = level;
+}
+
+function setDefaultLevel() {
+  var levelText = document.getElementById("levelText");
+  levelText.textContent = "normal";
 }
