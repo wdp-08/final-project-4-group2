@@ -25,13 +25,29 @@
                             </div>
                             <div class="col-6">
                                 <button type="button" class="btn btn-warning m-3" style="width: 150px; font-family: 'poppins'; font-weight: bold;">Mulai</button>
-                                <button type="button" class="btn btn-warning m-3" style="width: 150px; font-family: 'poppins'; font-weight: bold;">Setting</button>
+                                <button type="button" class="btn btn-warning m-3" style="width: 150px; font-family: 'poppins'; font-weight: bold;" data-bs-toggle="modal" data-bs-target="#myModal">Setting</button>
                                 <button type="button" class="btn btn-warning m-3" style="width: 150px; font-family: 'poppins'; font-weight: bold;">Leaderboard</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Pilih Tingkat Kesulitan</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <button type="button" class="btn btn-warning" onclick="selectLevel('easy')">Easy</button>
+                  <button type="button" class="btn btn-warning" onclick="selectLevel('normal')">Normal</button>
+                  <button type="button" class="btn btn-warning" onclick="selectLevel('hard')">Hard</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
 
     <script src="js/app.js"></script>

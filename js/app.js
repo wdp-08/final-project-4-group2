@@ -72,3 +72,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var nickname = localStorage.getItem("nickname");
   document.getElementById("result").textContent = nickname;
 });
+
+function selectLevel(level) {
+  alert("Anda memilih level: " + level);
+  $('#myModal').modal('hide');
+}
