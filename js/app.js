@@ -81,6 +81,9 @@ function selectLevel(level) {
 function redirectToHighscore() {
   window.location.href = "highscore.html";
 }
+function redirectToIngame() {
+  window.location.href = "inGame.html";
+}
 
 function selectLevel(level) {
   var levelText = document.getElementById("levelText");
