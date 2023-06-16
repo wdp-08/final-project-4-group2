@@ -7,8 +7,31 @@ let temp = 0;
 let done = false;
 let xxx = 1;
 let durasi = parseInt(time.innerHTML);
+let timeRange = null;
+
+const pemain = {
+  nickname: null,
+  level: null,
+  score: null,
+};
+
+const level = {
+  easy: [1000, 2000],
+  medium: [500, 1000],
+  hard: [250, 600],
+};
 
 function start() {
+  getData();
+
+  if (pemain.level == "easy") {
+    timeRange = level.easy;
+  } else if (pemain.level == "medium") {
+    timeRange = level.medium;
+  } else {
+    timeRange = level.hard;
+  }
+
   let timer = setInterval((e) => {
     if (!done) {
       durasi--;
@@ -17,17 +40,24 @@ function start() {
 
     if (durasi == 0) {
       done = true;
-      console.log(0)
-      clearInterval(timer)
-      pushScore()
-      location.replace("afterGame.html");
 
+      clearInterval(timer);
+      pushScore();
+      location.replace("afterGame.html");
     }
   }, 1000);
 
   // reset
   reset();
   show(valid(rand(maling.length)));
+}
+
+function getData() {
+  const level = localStorage.getItem("LEVEL");
+  const nickname = localStorage.getItem("nickname");
+
+  pemain.level = level;
+  pemain.nickname = nickname;
 }
 
 function reset() {
@@ -49,17 +79,19 @@ function show(i) {
   temp = i;
 
   // ganti gambar dulu bos
-  const gambarRandom = gambar[rand(gambar.length)]
+  const gambarRandom = gambar[rand(gambar.length)];
   maling[i].style.backgroundImage = `url(../img/${
     // gambar[rand(gambar.length)]
     gambarRandom
-    })`;
+  })`;
   if (gambarRandom == "malingfix.png") {
-    maling[i].style.backgroundSize = "450px"
+    maling[i].style.backgroundSize = "450px";
   } else {
-    maling[i].style.backgroundSize = "230px"
+    maling[i].style.backgroundSize = "230px";
   }
   maling[i].classList.remove("hide");
+
+  console.log(timeRange);
 
   setTimeout(function () {
     // close
@@ -69,7 +101,7 @@ function show(i) {
     if (!done) {
       show(i);
     }
-  }, randRange(500, 1000));
+  }, randRange(timeRange[0], timeRange[1]));
 }
 
 function valid(i) {
@@ -89,17 +121,16 @@ function randRange(min, max) {
 }
 
 function pushScore() {
-  const final_skor = skor.innerHTML
+  const final_skor = skor.innerHTML;
+  pemain.score = final_skor;
 
   let dataSkor;
   if (localStorage.getItem("dataSkor") == null) {
     dataSkor = [];
   } else {
-    dataSkor = JSON.parse(localStorage.getItem("dataSkor"))
+    dataSkor = JSON.parse(localStorage.getItem("dataSkor"));
   }
-  dataSkor.push({
-    score: final_skor,
-  })
+  dataSkor.push(pemain);
   localStorage.setItem("dataSkor", JSON.stringify(dataSkor));
 }
 
