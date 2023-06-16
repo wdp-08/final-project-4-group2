@@ -2,6 +2,8 @@ const pintu = document.querySelectorAll(".pintu");
 const maling = document.querySelectorAll(".maling");
 const skor = document.querySelector(".skor");
 const time = document.querySelector(".time");
+const bonk = new Audio("sound/bonkk.mp3");
+const bgsound = new Audio("sound/bgs.mp3")
 
 let temp = 0;
 let done = false;
@@ -23,7 +25,7 @@ const level = {
 
 function start() {
   getData();
-
+  
   if (pemain.level == "easy") {
     timeRange = level.easy;
   } else if (pemain.level == "medium") {
@@ -32,6 +34,8 @@ function start() {
     timeRange = level.hard;
   }
 
+  bgsound.play()
+  
   let timer = setInterval((e) => {
     if (!done) {
       durasi--;
@@ -136,6 +140,7 @@ function pushScore() {
 
 maling.forEach((m, i) => {
   m.addEventListener("click", (e) => {
+    bonk.play()
     console.log(i);
 
     if (m.style.backgroundImage.slice(12, -2) == "malingfix.png") {
